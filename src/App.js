@@ -119,6 +119,7 @@ function App() {
     setSnake(SNAKE_START);
     setDir([0, -1]);
     setScore(0);
+    audio[2].play();
   };
 
   const pauseGame = () => {
