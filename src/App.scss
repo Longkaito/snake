@@ -1,0 +1,93 @@
+body {
+  background-color: #2c3e50;
+}
+
+.container {
+  width: 1200px;
+  margin: 20px auto 0;
+  display: flex;
+  .right {
+    width: 100%;
+    border: 1px solid #fff;
+    margin-left: 30px;
+    border-radius: 5px;
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      background-color: #3498db;
+      outline: none;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+      &:nth-child(2) {
+        background-color: #27ae60;
+      }
+      &:last-child {
+        margin-top: 20px;
+        padding: 10px 35px;
+      }
+    }
+    .gameOver {
+      color: #fff;
+      font-size: 32px;
+      animation: changeColor 0.5s infinite;
+    }
+    .dashboard {
+      font-size: 20px;
+      color: #fff;
+      border: 1px solid #fff;
+      margin: 10px 50px;
+      padding-left: 20px;
+      border-radius: 5px;
+      p {
+        display: inline-block;
+        // margin-left: 20px;
+        width: 50%;
+        i {
+          display: inline-block;
+          width: 30px;
+        }
+      }
+    }
+    .control {
+      padding: 10px 50px;
+      position: relative;
+      .score {
+        color: #fff;
+        font-size: 30px;
+        margin: 0;
+      }
+      .gameOver {
+        font-size: 40px;
+        position: absolute;
+        top: 70px;
+      }
+      .button {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 100px;
+      }
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+@keyframes changeColor {
+  0% {
+    color: #e74c3c;
+  }
+  25% {
+    color: #3498db;
+  }
+  50% {
+    color: #e67e22;
+  }
+  75% {
+    color: #8e44ad;
+  }
+}
