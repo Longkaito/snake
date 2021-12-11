@@ -107,6 +107,10 @@ function App() {
 
   useInterval(gameLoop, speed);
   const startGame = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "Click button Start game",
+    });
     setSpeed(SPEED);
     audio[2].play();
   };
@@ -119,6 +123,10 @@ function App() {
   };
 
   const playAgain = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "Click button Play Again",
+    });
     setSpeed(SPEED);
     setGameOver(false);
     setFood(FOOD_START);
@@ -129,6 +137,10 @@ function App() {
   };
 
   const pauseGame = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "Click button Pause",
+    });
     setSpeed(pause ? null : SPEED);
     setPause(!pause);
   };
