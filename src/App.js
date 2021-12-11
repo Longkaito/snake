@@ -27,7 +27,7 @@ function App() {
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
-    ReactGA.initialize("UA-215081488-1");
+    ReactGA.initialize("UA-215031408-1");
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
