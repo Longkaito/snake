@@ -13,7 +13,6 @@ import audioEat from "./sounds/snakeEat.wav";
 import audioGameOver from "./sounds/gameOver.wav";
 import audioStart from "./sounds/soundBGC.mp3";
 import ReactGA from "react-ga";
-ReactGA.initialize("UA-215081488-1");
 
 function App() {
   const audio = document.getElementsByTagName("audio");
@@ -26,6 +25,11 @@ function App() {
   const [score, setScore] = useState(0);
   const [pause, setPause] = useState(true);
   const [gameOver, setGameOver] = useState(false);
+
+  useEffect(() => {
+    ReactGA.initialize("UA-215081488-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   //Khởi tạo canvas bắt đầu game
   useEffect(() => {
