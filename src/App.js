@@ -12,6 +12,8 @@ import {
 import audioEat from "./sounds/snakeEat.wav";
 import audioGameOver from "./sounds/gameOver.wav";
 import audioStart from "./sounds/soundBGC.mp3";
+import ReactGA from "react-ga";
+ReactGA.initialize("UA-215081488-1");
 
 function App() {
   const audio = document.getElementsByTagName("audio");
